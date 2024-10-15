@@ -1,1 +1,47 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To-Do List Management</title>
+</head>
+<body>
+    <nav>
+        <h1>Project To-Do List</h1>
+        <a href="add-member.html">+ Add New Member</a>
+    </nav>
+    <div class="container">
+        <aside>
+            <h2>Members</h2>
+            <ul id="memberList"></ul>
+        </aside>
+        <main>
+            <h2 id="selectedMemberName">Select a Member to View Tasks</h2>
+            <form id="addToDoForm">
+                <label for="memberSelect">Assign To:</label>
+                <select id="memberSelect" required></select>
+
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" required>
+
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" required>
+
+                <label for="taskStatus">Status:</label>
+                <select id="taskStatus" required>
+                    <option value="Not Started">Not Started</option>
+                    <option value="On Progress">On Progress</option>
+                    <option value="Done">Done</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <h3>To-Do List</h3>
+            <ul id="todoList"></ul>
+        </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
